@@ -49,7 +49,7 @@
 							curl_setopt($ch, CURLOPT_HEADER, 0);            // No header in the result 
 							curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return, do not echo result  
 							//set apiKey
-							curl_setopt($ch, CURLOPT_HTTPHEADER, array('apiKey: 460ad6f3-8216-469f-9b1c-52cffa5d812c')); 
+							curl_setopt($ch, CURLOPT_HTTPHEADER, array('apiKey: value_api_key')); 
 
 							// Fetch and return content, save it.
 							$raw_data = curl_exec($ch);
