@@ -47,7 +47,9 @@
 							$ch = curl_init();
 							curl_setopt($ch, CURLOPT_URL, "http://202.137.7.177:4280/json/bonus/member?period=" . $period . "&mbr_code=" . $mbr_code);
 							curl_setopt($ch, CURLOPT_HEADER, 0);            // No header in the result 
-							curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return, do not echo result   
+							curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return, do not echo result  
+							//set apiKey
+							curl_setopt($ch, CURLOPT_HTTPHEADER, array('apiKey: 460ad6f3-8216-469f-9b1c-52cffa5d812c')); 
 
 							// Fetch and return content, save it.
 							$raw_data = curl_exec($ch);
